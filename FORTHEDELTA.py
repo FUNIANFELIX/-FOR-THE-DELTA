@@ -1,9 +1,10 @@
 import time
 import sys
 
+#FOR THE DELTA INTERFACE 1.0    
+
 time.sleep(1)
-time.sleep(1)
-print("...You were travelling through the fractured islands, the job of astronaut for KHRONOS lab and saw a shrine...")
+print("...You were travelling through the fractured islands, you had the job of a astronaut with level 4 clearance for KHRONOS lab and saw a shrine...")
 time.sleep(0.9)
 print("..You needed a fractured sigil but out of casuality, you already had one...(would you like to use it?)")
 
