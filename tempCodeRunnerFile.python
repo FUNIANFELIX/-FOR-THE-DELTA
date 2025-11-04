@@ -2,6 +2,7 @@ import time
 import sys
 
 time.sleep(1)
+time.sleep(1)
 print("...You were travelling through the fractured islands, the job of astronaut for KHRONOS lab and saw a shrine...")
 time.sleep(0.9)
 print("..You needed a fractured sigil but out of casuality, you already had one...(would you like to use it?)")
@@ -47,7 +48,7 @@ def delta_interface():
             print(f"//CONNECTED {User_name} TO INTERFACE//")
 
             while True:
-                response = input("//LONG BEFORE TIME HAD A NAME, A VESSEL WAS CREATED δ AS GUARDIAN OF REALITY, PROTECTOR OF THE FLYERS//\n")
+                response = input("")
                 resp_lower = response.lower()
                 if resp_lower == "what?":
                     print("//VESSEL WAS DESTROYED DURING CREATION OF THE NEW UNIVERSE, TO REIGNITE THE δ 3 DESIGNS REQUIRED")
@@ -62,6 +63,8 @@ def delta_interface():
             sys.exit()
 
 
-# Only run the interface if they used the sigil
+
 if fractured_sigil == "use it":
     delta_interface()
+
+#hi braulio :)
