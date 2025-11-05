@@ -1,27 +1,28 @@
 import time
 import sys
 
+# FOR THE DELTA INTERFACE 1.0    
+
 time.sleep(1)
-time.sleep(1)
-print("...You were travelling through the fractured islands, the job of astronaut for KHRONOS lab and saw a shrine...")
+print("...You were travelling through the fractured islands. You had the job of an astronaut with level 4 clearance for KHRONOS Lab and saw a shrine...")
 time.sleep(0.9)
-print("..You needed a fractured sigil but out of casuality, you already had one...(would you like to use it?)")
+print("..You needed a fractured sigil, but by chance, you already had one... (Would you like to use it?)")
 
 fractured_sigil = input("Use it? ").lower()
 
 if fractured_sigil == "use it":
-    print("..you used it...")
+    print("..You used it...")
     time.sleep(1)
-    print("You are somewhat inside a room...is it the shrine? There was a triangular statue, you couldn't hold your curiosity and touched the interface.")
+    print("You are now inside a room... Is it the shrine? There was a triangular statue — you couldn't hold your curiosity and touched the interface.")
     time.sleep(1)
-    print("//δ: UNKNOWN SIGNATURE DETECTED//")
+    print("// δ: UNKNOWN SIGNATURE DETECTED //")
     time.sleep(2)
-    print("//6 - XXX - 12 - 18 - 30 - 40//")
+    print("// 6 - XXX - 12 - 18 - 30 - 48 //")
 elif fractured_sigil == "nah":
-    print("...You backed away from the shrine, continued to search for resources on the floating rogue island in space outside Earth's atmosphere. You only have 3 minutes left before radiation contamination...")
+    print("...You backed away from the shrine, continuing to search for resources on the floating rogue island in space outside Earth's atmosphere. You only have 3 minutes left before radiation contamination...")
     sys.exit()
 else:
-    print("You stand there unsure...the silence of space answers nothing.")
+    print("You stand there unsure... the silence of space answers nothing.")
     sys.exit()
 
 
@@ -30,41 +31,46 @@ def delta_interface():
         try:
             answer = int(input("Fill in the missing number (XXX): "))
         except ValueError:
-            print("Please enter a valid number.")
+            print("// PLEASE ENTER A VALID NUMERIC VALUE //")
             continue
 
         if answer == 9:
             seq = [6, answer, 12, 18, 30, 48]
-            print("//AUTHORIZATION...")
+            print("// AUTHORIZATION...")
             time.sleep(1)
-            print("//SUCCESS - CONTINUE//")
-            print("//SEQUENCE COMPLETED//", seq)
+            print("// SUCCESS - CONTINUE //")
+            print("// SEQUENCE COMPLETED //", seq)
 
-            User_name = input("//NAME OF ENTITY ACCESSING THE INTERFACE//").strip()
-            if User_name == "":
-                User_name = "User"
-            print("//AUTHORIZATION//")
+            user_name = input("// NAME OF ENTITY ACCESSING THE INTERFACE // ").strip()
+            if user_name == "":
+                user_name = "User"
+
+            print("// AUTHORIZATION //")
             time.sleep(2)
-            print(f"//CONNECTED {User_name} TO INTERFACE//")
+            print(f"// CONNECTED {user_name.upper()} TO INTERFACE //")
 
             while True:
                 response = input("")
                 resp_lower = response.lower()
-                if resp_lower == "what?":
-                    print("//VESSEL WAS DESTROYED DURING CREATION OF THE NEW UNIVERSE, TO REIGNITE THE δ 3 DESIGNS REQUIRED")
-                elif resp_lower == "what designs?":
-                    print("//THE STAR, THE CAMMELLITE GUARDIAN, THE SHAPER — 3 DESIGNS FUSED, THEIR POWERS TO RECREATE THE VESSEL AND THE POSSIBILITY OF PERFECTING ITS DESIGN")
-                else:
-                    print(f"Delta Interface: You said '{response}'. Let's keegip going...")
-        else:
-            print("//AUTHORIZATION...")
-            time.sleep(1)
-            print("//FAILED SESSION TERMINATED//")
-            sys.exit()
 
+                if resp_lower == "what?":
+                    print("// VESSEL WAS DESTROYED DURING CREATION OF THE NEW UNIVERSE. TO REIGNITE, THE δ 3 DESIGNS WERE REQUIRED. //")
+                elif resp_lower == "what designs?":
+                    print("// THE STAR, THE CAMMELLITE GUARDIAN, AND THE SHAPER — 3 DESIGNS FUSED. THEIR POWERS RECREATED THE VESSEL AND PERFECTED ITS DESIGN. //")
+                elif resp_lower == "why choose me?":
+                    print("// YOU ARE A WORTHY VESSEL — COURAGE, HOPE, A PROTECTOR FOR THE DREAMERS TO FLY. //")
+                elif resp_lower == "exit":
+                    print("// DISCONNECTING INTERFACE... //")
+                    time.sleep(1)
+                    sys.exit()
+                else:
+                    print("// ...? //")
+        else:
+            print("// AUTHORIZATION...")
+            time.sleep(1)
+            print("// FAILED SESSION TERMINATED //")
+            sys.exit()
 
 
 if fractured_sigil == "use it":
     delta_interface()
-
-#hi braulio :)
